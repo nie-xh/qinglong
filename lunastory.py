@@ -21,7 +21,7 @@ def signIn(cookie):
     }
     response = requests.get(url, params=params, headers=headers).json()
     print(response)
-    QLAPI.notify('lunastory签到', response)
+    QLAPI.notify('lunastory签到', str(response))
 
 def main():
     cookie = os.getenv("lunastory_cookie")
